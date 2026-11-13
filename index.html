@@ -201,26 +201,82 @@ footer a:hover{color:#fff}
 }
 @media (max-width:640px){
 .container{padding:0 20px}
-section{padding:80px 0}
-.hero-wrap{padding:10px}
-.hero{min-height:calc(100svh - 20px)}
-.hero-bg{background-position:68% center}
-.hero::before{background:linear-gradient(180deg,rgba(247,244,239,.92) 0%,rgba(247,244,239,.7) 45%,rgba(247,244,239,0) 75%)}
-.nav{margin:10px;padding:12px 12px 12px 16px}
-.nav .btn{padding:8px 14px;font-size:12px}
+section{padding:72px 0}
+h2{font-size:32px}
+p.lead{font-size:15px}
+/* hero */
+.hero-wrap{padding:8px}
+.hero{min-height:calc(100svh - 16px);border-radius:26px}
+.hero-bg{background-position:66% center}
+.hero::before{background:linear-gradient(180deg,rgba(247,244,239,.95) 0%,rgba(247,244,239,.75) 38%,rgba(247,244,239,0) 62%)}
+.hero::after{height:42%;background:linear-gradient(0deg,rgba(20,26,25,.35),transparent)}
+.nav{margin:8px;padding:10px 10px 10px 16px}
+.nav .btn{padding:9px 14px;font-size:12.5px}
 .logo-mark{display:none}
-.hero-content{justify-content:flex-start;padding:48px 24px 0}
-.hero-bottom{flex-direction:column;align-items:flex-start;gap:14px;padding:0 20px 74px}
-.proof{align-items:flex-start}
-.plan-grid{grid-template-columns:1fr}
-.plan h3,.plan ul{min-height:0}
-.t-card{flex-basis:100%}
-.contact-card{padding:44px 22px 36px}
+.logo-text b{font-size:22px}
+.hero-content{justify-content:flex-start;padding:36px 22px 0}
+.hero h1{font-size:44px;max-width:320px}
+.hero-sub{font-size:15px;margin-top:14px;max-width:310px}
+.hero-bottom{flex-direction:column;align-items:stretch;gap:12px;padding:0 0 92px}
+.chips{flex-wrap:nowrap;overflow-x:auto;padding:0 18px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;padding:8px 16px;font-size:12.5px}
+.proof{flex-direction:row;align-items:center;justify-content:space-between;padding:0 18px;gap:8px}
+.rating{font-size:11px;padding:6px 10px 6px 6px;gap:6px;white-space:nowrap}
+.rating .stars{display:none}
+.proof .btn-ghost{padding:9px 14px;font-size:12.5px;flex:none;white-space:nowrap}
+/* diferenciais: ícone ao lado do texto */
+.features h2{margin-bottom:32px}
+.feat-grid{gap:26px}
+.feat{display:grid;grid-template-columns:40px 1fr;column-gap:16px}
+.feat-icon{grid-row:span 2;width:40px;height:40px;margin:2px 0 0}
+.feat h3{font-size:20px;margin-bottom:6px;max-width:none}
+.feat p{font-size:14px;max-width:none}
+/* blocos */
+.split{gap:28px}
+.split + .split{margin-top:64px}
+.shape{border-radius:40px 40px 40px 0;aspect-ratio:4/3.4}
+.shape.alt{border-radius:0 40px 40px 40px}
+.about-points b{font-size:24px}
+/* planos: carrossel com arraste */
+.plan-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:36px -20px 0;padding:10px 20px 26px;align-items:stretch;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.plan-grid::-webkit-scrollbar{display:none}
+.plan{flex:0 0 78%;scroll-snap-align:center;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column}
+.plan.featured{border-color:transparent;padding-top:28px;padding-bottom:28px}
+.plan h3{min-height:0;font-size:22px;margin-bottom:16px}
+.plan ul{min-height:0;flex:1}
+.price{margin:20px 0 14px}
+.plan .btn{padding:13px 20px}
+.swipe-hint{display:flex}
+/* depoimentos */
+.testi-viewport{margin-top:36px}
+.t-card{flex-basis:100%;padding:0 4px}
+.t-card p{font-size:15px}
+.t-nav button{width:40px;height:40px}
+/* contato */
+.contact{padding-top:24px}
+.contact-card{padding:40px 20px 32px;border-radius:26px}
+.contact h2{font-size:52px;margin-bottom:32px}
 .field-row{grid-template-columns:1fr;gap:0}
-footer{margin:-90px 10px 10px}
-.foot-grid{grid-template-columns:1fr}
-.f9-badge{font-size:10.5px}
+.field input,.field textarea{font-size:16px}
+.contact form .btn{padding:15px 20px;font-size:15px}
+.contact-grid{gap:32px}
+/* rodapé compacto */
+footer{margin:-90px 8px 8px;border-radius:26px;padding:130px 0 110px}
+.foot-grid{grid-template-columns:1fr 1fr;gap:30px 20px}
+.foot-grid>div:first-child,.foot-grid>div:last-child{grid-column:1/-1}
+.copy{margin-top:36px}
+/* selo + whatsapp flutuante */
+.f9-badge{left:10px;bottom:14px;font-size:10px;padding:5px 11px 5px 5px;gap:7px}
+.f9-badge svg{width:22px;height:22px}
+.wa-float{display:grid}
 }
+.swipe-hint{display:none;justify-content:center;gap:6px;font-size:12px;color:var(--ink-3);margin-top:-6px}
+.wa-float{display:none;position:fixed;right:14px;bottom:12px;z-index:998;width:54px;height:54px;border-radius:50%;background:#25d366;place-items:center;box-shadow:0 10px 24px -6px rgba(0,0,0,.35);transition:transform .2s;animation:waIn .6s 1.6s cubic-bezier(.2,.7,.2,1) both}
+.wa-float:active{transform:scale(.92)}
+.wa-float svg{width:28px;height:28px;fill:#fff}
+@keyframes waIn{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:none}}
+@media (hover:none){.plan:not(.featured):hover,.plan.featured.in:hover{transform:none;box-shadow:none}.plan.featured.in:hover{box-shadow:0 30px 60px -30px rgba(16,41,42,.55)}}
 </style>
 </head>
 <body>
@@ -340,6 +396,7 @@ footer{margin:-90px 10px 10px}
 <a class="btn btn-primary" href="#contato">Agendar</a>
 </div>
 </div>
+<p class="swipe-hint">Arraste para ver os planos →</p>
 </div>
 </section>
 <!-- ================= DEPOIMENTOS ================= -->
@@ -398,6 +455,7 @@ footer{margin:-90px 10px 10px}
 <p class="copy">© 2026 Stúdio de Pilates Marielly Tozato. Todos os direitos reservados.</p>
 </div>
 </footer>
+<a class="wa-float" href="https://wa.me/553484203675?text=Ol%C3%A1!%20Quero%20agendar%20uma%20aula%20experimental." target="_blank" rel="noopener" aria-label="Agendar pelo WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.7-1.2 2.2 2.2 0 00.2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg></a>
 <!-- Selo da prévia -->
 <div class="f9-badge" aria-hidden="true">
 <svg viewBox="0 0 64 64">
@@ -429,11 +487,15 @@ document.querySelectorAll('.feat-grid,.plan-grid').forEach(g=>[...g.children].fo
 const bg=document.getElementById('heroBg'),nav=document.querySelector('.nav');
 let ticking=false;
 addEventListener('scroll',()=>{if(ticking)return;ticking=true;requestAnimationFrame(()=>{const y=scrollY;
-if(y<innerHeight&&!matchMedia('(prefers-reduced-motion:reduce)').matches){bg.style.animation='none';bg.style.transform=`translateY(${y*.25}px) scale(1.02)`}
+if(y<innerHeight&&innerWidth>640&&!matchMedia('(prefers-reduced-motion:reduce)').matches){bg.style.animation='none';bg.style.transform=`translateY(${y*.25}px) scale(1.02)`}
 nav.classList.toggle('scrolled',y>40);ticking=false})},{passive:true});
 // Carrossel avança sozinho
 let auto=setInterval(()=>document.getElementById('next').click(),5000);
 document.querySelector('.testi').addEventListener('mouseenter',()=>clearInterval(auto));
+// Arrastar depoimentos no celular
+let sx=null;
+track.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;clearInterval(auto)},{passive:true});
+track.addEventListener('touchend',e=>{if(sx===null)return;const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40)document.getElementById(dx<0?'next':'prev').click();sx=null},{passive:true});
 // Formulário -> WhatsApp
 document.getElementById('form').addEventListener('submit',e=>{
 e.preventDefault();
